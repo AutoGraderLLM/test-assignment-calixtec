@@ -31,7 +31,7 @@ jobs:
       - name: Clone Working Directory
         run: |
           find $HOME/logs/ -mindepth 1 ! -name 'autograder_output.txt' -delete  # Delete everything except autograder_output.txt
-          cp -r $HOME/actions-runner/_work/csc231-1-1-master/csc231-1-1-master/* $HOME/logs/
+          cp -r $HOME/actions-runner/_work/autograderllm-testclass-a-test-assignment-csc231-1-1/autograderllm-testclass-a-test-assignment-csc231-1-1/* $HOME/logs/
 
       # Step 4: Run Python script
       - name: Run Python script
