@@ -40,9 +40,9 @@ jobs:
       - name: Check2
         run: ls
       - name: Check3
-        run: cd ..
+        run: cd ../
       - name: Check4
-        run: ls
+        run: pwd
         
       # Step 4: Run Python script
       - name: Run Python script
