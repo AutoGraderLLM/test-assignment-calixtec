@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
       # Step 1.1: test
       - name: Create autograder_output.txt and logs directory
-        run: ls /.github
+        run: ls .github
       # Step 1.5: Create autograder_output.txt file and logs directory
       - name: Create autograder_output.txt and logs directory
         run: |
