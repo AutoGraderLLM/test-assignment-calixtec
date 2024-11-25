@@ -22,8 +22,6 @@ jobs:
         run: cd .github
       - name: test3
         run: ls -a
-      - name: test4
-        run: cd classroom
       - name: test5
         run: echo $STUDENT_NAME"
         
