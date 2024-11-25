@@ -23,7 +23,7 @@ jobs:
       - name: test3
         run: ls -a
       - name: test5
-        run: echo $STUDENT_NAME"
+        run: echo $STUDENT_NAME
         
         
       # Step 1.5: Create autograder_output.txt file and logs directory
