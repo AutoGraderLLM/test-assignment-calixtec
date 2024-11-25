@@ -1,26 +1,24 @@
 # Feedback for Student
 
-Based on the Autograder Output and Professor Instructions, here are some guided questions and suggestions for each student code:
+Here are some guided questions and suggestions for the student based on the Autograder Output and Professor Instructions:
 
-**time_conversion.c:**
+**Time Conversion Code (time_conversion.c)**
 
-1. The autograder output shows a warning about an implicit declaration of the `atoi` function. This is because the `atoi` function is declared in the `stdlib.h` library, which is not included in your code.
-2. To fix this issue, you need to add the following line at the top of your file: `#include <stdlib.h>`.
-3. The program seems to be working correctly and passing all tests.
+1. The Autograder Output shows a warning about an implicit function declaration of `atoi`. What is `atoi` in C, and how can you fix this warning?
+2. The program seems to be working correctly, but the output format is not exactly as specified. How can you modify the code to print the result in the format **X hours Y minutes**?
+3. Make sure to include the necessary header file for `atoi` by adding `#include <stdlib.h>` at the top of the code.
 
-**product.c:**
+**Product Code (product.c)**
 
-1. The autograder output shows two errors related to the `product` variable. This is because the `product` variable is declared after it's being used.
-2. To fix this issue, you need to move the declaration of the `product` variable to before its first use.
-3. Additionally, the program seems to be reading only 10 numbers from the file instead of all 11. This might be due to an off-by-one error in the loop condition.
-4. You should also check if the product is within a reasonable range (e.g., not too large) to avoid overflow issues.
+1. The Autograder Output shows two errors related to variable declarations and usage. What are the specific issues, and how can you fix them?
+2. In C, variables must be declared before they are used. Make sure to move the declaration of `int product` above its usage.
+3. The program is reading 10 integers from the file but only using the first 9 in the calculation. How can you modify the code to use all 10 integers?
+4. Consider adding error handling for cases where the file cannot be opened or read correctly.
 
-Some general suggestions:
+**General Suggestions**
 
-1. Make sure to include all necessary header files and libraries in your code.
-2. Check for potential errors, such as file I/O or arithmetic operations, to ensure robustness.
-3. Use meaningful variable names and comments to make your code easier to understand.
-4. Consider adding input validation and error handling to handle unexpected inputs or file issues.
-
-By addressing these issues and suggestions, you should be able to fix the errors in your code and get it working correctly.
+1. Review the Professor Instructions and make sure you understand the requirements of both tasks.
+2. Use a consistent coding style throughout your files, including indentation, spacing, and naming conventions.
+3. Make sure to include all necessary header files and libraries in your code.
+4. Test your code thoroughly with different inputs to ensure it works as expected.
 
