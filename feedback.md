@@ -1,22 +1,36 @@
 # Feedback for Student
 
-Based on the Autograder Output and Professor Instructions, here are some guided questions and suggestions for the student:
+Here are some guided questions and helpful suggestions for each student code based on the Autograder Output and Professor Instructions:
 
-**Time Conversion Code (time_conversion.c)**
+**time_conversion.c:**
 
-1. The error message indicates that the `atoi` function is not declared. Check if the `stdio.h` header file has been included at the top of the code.
-2. The `atoi` function is used to convert a string to an integer. Make sure to check the return value to handle any potential errors.
+1. What is causing the implicit declaration warning? 
+   - The `atoi` function is used but not declared anywhere in the code.
 
-**Product Code (product.c)**
+2. How to fix this warning?
+   - Add the necessary `#include <stdlib.h>` directive at the top of the file to include the standard library where `atoi` is defined.
 
-1. There are two errors related to the `product` variable: it is not declared before use and there is an extra comma after the `int sum = 0;` line.
-2. The array `numbers` has a fixed size of 11, but only 10 values are read from the file. This will cause undefined behavior. Consider using a dynamically allocated array or checking the return value of `fscanf` to handle errors.
+**product.c:**
 
-**General Suggestions**
+1. What are the errors occurring on lines 17 and 27? 
+   - There is a missing comma after the `int sum = 0;` declaration.
+   - The variable `product` is used before it's declared.
 
-1. Review the Professor Instructions to ensure that all requirements have been met.
-2. Check the Autograder Output for any other error messages or warnings that may indicate issues with the code.
-3. Make sure to test the code thoroughly before submitting it, including checking the output format and handling potential errors.
-4. Consider adding comments to explain the logic behind the code, especially in complex sections like the product calculation.
-5. Review the README.md file to ensure that all required files are included and that the submission instructions have been followed correctly.
+2. How to fix these errors?
+   - Add a comma after the `int sum = 0;` declaration.
+   - Declare the `product` variable before using it.
+
+3. What is causing the test to fail? 
+   - The product calculation is incorrect due to the missing declaration of the `product` variable and incorrect multiplication logic.
+
+4. How to fix this issue?
+   - Move the `int product = 1;` declaration above the loop where `numbers[i]` is multiplied by it.
+   - Use the correct formula for calculating the product of numbers in an array, which involves multiplying all elements together.
+
+5. What should be checked in the test script? 
+   - The output of the program should match the expected values provided in the README.md file.
+
+6. How to fix this issue?
+   - Ensure that the `product` variable is correctly calculated and printed out.
+   - Check if the input numbers are within the range specified (1-20) and handle any potential errors.
 
