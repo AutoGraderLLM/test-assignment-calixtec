@@ -11,11 +11,13 @@ jobs:
   build:
     name: Autograding
     runs-on: self-hosted
-
+    
     steps:
       # Step 1: Checkout the repository
       - uses: actions/checkout@v2
-
+      # Step 1.1: test
+      - name: Create autograder_output.txt and logs directory
+        run: ls
       # Step 1.5: Create autograder_output.txt file and logs directory
       - name: Create autograder_output.txt and logs directory
         run: |
