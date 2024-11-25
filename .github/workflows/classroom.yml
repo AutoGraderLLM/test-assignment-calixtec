@@ -16,8 +16,18 @@ jobs:
       # Step 1: Checkout the repository
       - uses: actions/checkout@v2
       # Step 1.1: test
-      - name: Create autograder_output.txt and logs directory
-        run: ls .github/classroom
+      - name: test1
+        run: ls .github
+      - name: test2
+        run: cd .github
+      - name: test3
+        run: ls -a
+      - name: test4
+        run: cd classroom
+      - name: test5
+        run: ls
+        
+        
       # Step 1.5: Create autograder_output.txt file and logs directory
       - name: Create autograder_output.txt and logs directory
         run: |
