@@ -22,8 +22,9 @@ jobs:
         run: cd .github
       - name: test3
         run: ls -a
+        
       - name: test5
-        run: echo $GITHUB_REPOSITORY
+        run: echo "$GITHUB_REPOSITORY" | awk -F'/' '{print $2}'
         
         
       # Step 1.5: Create autograder_output.txt file and logs directory
@@ -36,6 +37,7 @@ jobs:
       - uses: education/autograding@v1
         id: autograde
         continue-on-error: true
+        
         
       # Step 3: Clone the working directory to another persistent location
       - name: Clone Working Directory
