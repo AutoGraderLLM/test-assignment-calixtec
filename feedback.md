@@ -2,20 +2,36 @@
 
 Based on the Autograder Output and Professor Instructions, here are some guided questions and helpful suggestions for each student code:
 
-**Product Code (product.c)**
+**time_conversion.c:**
 
-1. The error message indicates that there is an expected comma or semicolon before the `int` declaration of `product`. What does this mean in terms of C syntax?
-2. The Autograder Output also reports that `product` is undeclared at line 27. How can you fix this issue?
+1. What is the issue with the `atoi` function in this program? According to the Autograder Output, what warning message does it produce?
 
-**Time Conversion Code (time_conversion.c)**
+Answer: The `atoi` function is not declared in this program. To fix this, you need to include the `<stdlib.h>` header file at the beginning of your code.
 
-1. The Autograder Output indicates a warning about an implicit declaration of the `atoi` function. What does this mean, and how can you resolve the issue?
-2. The program seems to be working correctly in terms of output, but there is no error handling for cases where the input cannot be converted to an integer or when the conversion fails. How can you add basic error handling to make the program more robust?
+2. What is the expected output format for this program according to Professor Instructions? How does your current output match up with this format?
 
-**General Suggestions**
+Answer: Your current output is missing the hours and minutes parts. You should separate the calculation of hours and remaining minutes into two separate variables and then print them in the desired format.
 
-1. Make sure to check the Professor Instructions carefully and understand what each programming task requires.
-2. Review the Autograder Output carefully to identify specific errors and warnings, and use these as a starting point for debugging your code.
-3. Use online resources or C documentation to look up any functions or syntax that you are not familiar with.
-4. Consider using a code editor or IDE with built-in debugging tools to help you identify and fix issues in your code.
+**product.c:**
+
+1. What are the issues with the `int product = 1;` line in your program? According to the Autograder Output, what error message does it produce?
+
+Answer: The `int product = 1;` line is missing a semicolon at the end. To fix this, you need to add a semicolon after the assignment.
+
+2. What is the issue with the `product` variable being used before it's declared? According to the Autograder Output, what error message does it produce?
+
+Answer: The `product` variable is used in the line `product *= numbers[i];`, but it's not declared anywhere in the program. To fix this, you need to declare the `product` variable as an integer before using it.
+
+3. What is the expected output for this program according to Professor Instructions? How does your current output match up with this?
+
+Answer: Your current output is missing the sum and product parts. You should calculate the sum of the integers in the array and print it on one line, followed by the product of the integers on the next line.
+
+**General Suggestions:**
+
+1. Make sure to include all necessary header files at the beginning of your code.
+2. Check for any implicit function declarations or missing semicolons.
+3. Verify that your variables are declared before they're used in the program.
+4. Review the expected output format and make sure your program produces the correct result.
+
+By addressing these issues, you should be able to fix the errors in your code and produce the correct output for both programs.
 
