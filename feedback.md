@@ -1,22 +1,46 @@
 # Feedback for Student
 
-Based on the Autograder Output and Professor Instructions, here are some guided questions for the student:
+Based on the Autograder Output and Professor Instructions, here are some guided questions and helpful suggestions for each student code:
 
-**time_conversion.c:**
+**Product Code:**
 
-1. What is the issue with the `atoi` function in the program? According to the Autograder Output, what error message is reported?
-2. How can you fix the warning about implicit declaration of the `atoi` function?
+1. What is the expected declaration of the `product` variable? 
+   ```c
+int product = 1;
+```
+   However, in your code, it seems like you have declared two variables with the same name but different types (`int` and no type). This might be causing issues.
 
-**product.c:**
+2. Why are there errors related to the `product` variable being undeclared? 
+   It's likely because of the issue mentioned above. You need to declare `product` as an integer before using it.
 
-1. What are the two errors reported by the Autograder Output for this program? Can you identify which lines of code are causing these errors?
-2. Why do you think the compiler is complaining about the `product` variable being declared twice in the same scope?
-3. How can you fix both of these errors to make the program compile successfully?
+3. What is the expected output for the given input numbers?
+   The expected output should be:
+   ```
+Sum: 92
+Product: 1380188160
+```
+   However, your code seems to be printing incorrect values.
 
-**General:**
+4. Are there any issues with file handling in your code? 
+   Yes, you are closing the file after reading from it, but you haven't checked if `fscanf` was successful before that. This might cause issues if there's an error.
 
-1. Review the Professor Instructions for Assignment 2 and ensure that your implementation of **time_conversion.c** meets all the requirements specified.
-2. For **product.c**, double-check that your implementation correctly reads the integers from the text file, calculates their sum and product, and prints the results to console as required.
+**Time Conversion Code:**
 
-By addressing these questions, the student should be able to identify and fix the issues reported by the Autograder Output and ensure that their code meets all the requirements specified in the Professor Instructions.
+1. What is the expected behavior for the program when it encounters a non-integer input?
+   The program should print an error message and exit with a non-zero status code.
+
+2. Why are there warnings related to implicit function declarations? 
+   These warnings are because you're using `atoi` without declaring its return type or including the necessary header file (`stdlib.h`). 
+
+3. Are there any issues with variable naming in your code?
+   Yes, `total_minutes` could be renamed to something more descriptive like `minutes_to_convert`.
+
+4. What is the expected output for a valid input of 245 minutes? 
+   The program should print:
+   ```
+4 hours 5 minutes
+```
+   However, your code seems to be printing incorrect values.
+
+By addressing these issues, you can improve the correctness and robustness of your code.
 
