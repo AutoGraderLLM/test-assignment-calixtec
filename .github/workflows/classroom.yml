@@ -28,13 +28,22 @@ jobs:
       - uses: education/autograding@v1
         id: autograde
         continue-on-error: true
-
+        
       # Step 3: Clone the working directory to another persistent location
       - name: Clone Working Directory
         run: |
           find $HOME/logs/ -mindepth 1 ! -name 'autograder_output.txt' -delete  # Delete everything except autograder_output.txt
           cp -r $HOME/actions-runner/_work/test-assignment-calixtec/test-assignment-calixtec/* $HOME/logs/
-
+      - name: Create autograder_output.txt and logs directory
+        run: ls
+        
+      - name: Check2
+        run: ls
+      - name: Check3
+        run: cd ..
+      - name: Check4
+        run: ls
+        
       # Step 4: Run Python script
       - name: Run Python script
         run: python3 $HOME/script2.py
