@@ -2,25 +2,23 @@
 
 Based on the Autograder Output and Professor Instructions, here are some guided questions and suggestions for the student:
 
-**Product.c:**
+**Time Conversion (task 1)**
 
-1. Look at lines 13-14 in the code. The error message indicates that there is an expected ';' before 'while'. However, there is no 'while' loop in this code. Check if you have any other loops or conditional statements that might be causing this issue.
-2. On line 6, the variable 'binRep' is declared but not used. Remove this declaration as it seems unnecessary for this program.
-3. In the for loop on lines 21-28, there are errors in the syntax. Check if you have any typos or misplaced brackets/parentheses.
+* The error message indicates that there is a syntax error in the `main` function of `time_conversion.c`. Look at line 13 and check if there is an extra semicolon or any other syntax issue.
+* The variable `binRep` is declared but not used. Remove this declaration to avoid the warning.
+* There is another syntax error on line 20, where the loop condition is missing a semicolon. Add a semicolon after `i >= 0`.
+* The expected output for the test case with input `-6340` does not match the actual output. Check if the conversion logic is correct and if there are any issues with integer overflow.
 
-**Time_conversion.c:**
+**Product (task 2)**
 
-1. The error message indicates that there is an expected ';' before 'for'. However, there is no 'for' loop in this code. Check if you have any other loops or conditional statements that might be causing this issue.
-2. On line 24, the program prints '\n', which is a newline character. This might not be what you intended. Check if you need to print anything else before returning 0.
+* The error message indicates that there is a syntax error in the `main` function of `product.c`. Look at line 13 and check if there is an extra semicolon or any other syntax issue.
+* There is another syntax error on line 20, where the loop condition is missing a semicolon. Add a semicolon after `i >= 0`.
+* The array size for `numbers` is set to 11, but only 10 values are read from the file. Change the loop condition to `i < 10` to avoid accessing an out-of-bounds index.
+* The expected output for the test case does not match the actual output. Check if the sum and product calculations are correct.
 
-**Common issues:**
+**General Suggestions**
 
-1. Make sure to check your file paths and command line arguments in both programs. The Autograder Output suggests that there are errors with file paths or command line arguments.
-2. Review the syntax of your loops and conditional statements. The error messages suggest that there might be typos or misplaced brackets/parentheses.
-
-**General suggestions:**
-
-1. Make sure to test your programs thoroughly before submitting them. Run them on different inputs and check their output.
-2. Check the Autograder Output carefully for any errors or warnings. Address these issues before submitting your assignment.
-3. Review the Professor Instructions and make sure you understand what is expected of you in both programming tasks.
+* Make sure to check all command line arguments and handle any errors that may occur when opening or reading files.
+* Use meaningful variable names and comments to improve code readability.
+* Review the Professor Instructions and make sure to follow all requirements for this assignment.
 
