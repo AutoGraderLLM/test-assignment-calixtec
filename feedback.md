@@ -1,24 +1,26 @@
-# Feedback for Student
+# Feedback for introllm-LeonardAlmeida
 
-Based on the Autograder Output and Professor Instructions, here are some guided questions and suggestions for the student:
+Here are some guided questions based on the provided student code and professor instructions:
 
-**Time Conversion (task 1)**
+**i2b.c:**
 
-* The error message indicates that there is a syntax error in the `main` function of `time_conversion.c`. Look at line 13 and check if there is an extra semicolon or any other syntax issue.
-* The variable `binRep` is declared but not used. Remove this declaration to avoid the warning.
-* There is another syntax error on line 20, where the loop condition is missing a semicolon. Add a semicolon after `i >= 0`.
-* The expected output for the test case with input `-6340` does not match the actual output. Check if the conversion logic is correct and if there are any issues with integer overflow.
+1. What is the issue with the while loop condition in the given code? How can it be fixed?
 
-**Product (task 2)**
+2. The variable `binRep` is declared but not used anywhere in the code. What is its purpose, and how can it be utilized effectively?
 
-* The error message indicates that there is a syntax error in the `main` function of `product.c`. Look at line 13 and check if there is an extra semicolon or any other syntax issue.
-* There is another syntax error on line 20, where the loop condition is missing a semicolon. Add a semicolon after `i >= 0`.
-* The array size for `numbers` is set to 11, but only 10 values are read from the file. Change the loop condition to `i < 10` to avoid accessing an out-of-bounds index.
-* The expected output for the test case does not match the actual output. Check if the sum and product calculations are correct.
+3. In the for loop that prints the binary representation, the starting index is set to `N - 1`, which is incorrect according to the problem statement. How should the starting index be set instead?
 
-**General Suggestions**
+4. The code does not handle negative numbers correctly. What changes need to be made to accommodate both positive and negative integers?
 
-* Make sure to check all command line arguments and handle any errors that may occur when opening or reading files.
-* Use meaningful variable names and comments to improve code readability.
-* Review the Professor Instructions and make sure to follow all requirements for this assignment.
+5. The expected output for a random input number (-28117) does not match the actual output. What might be the reason, and how can it be corrected?
+
+**i2h.c:**
+
+1. The code uses `atoi` function to convert the command line argument to an integer. However, this function may throw errors if the input is not a valid integer. How can this issue be addressed?
+
+2. The variable `hex` has a fixed size of 9 characters, which might not be sufficient for all possible hexadecimal representations. What could be done to ensure that the output always fits within the allocated space?
+
+3. The code prints the hexadecimal representation with spaces between the digits, but according to the problem statement, there should be no spaces. How can this requirement be met?
+
+4. The expected output for a random input number (-28117) matches the actual output in terms of hexadecimal representation. However, the actual output is different from the expected one. What might be the reason, and how can it be corrected?
 
