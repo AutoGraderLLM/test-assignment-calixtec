@@ -32,6 +32,6 @@ int main(int argc, char* argv[]) {
   printf("Sum: %d\n", sum);
   printf("Product: %d\n", product);
   
-  return 0;
+  return 1;
   
 }
